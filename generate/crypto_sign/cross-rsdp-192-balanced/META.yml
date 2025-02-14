@@ -1,0 +1,34 @@
+name: cross-rsdp-192-balanced
+type: signature
+claimed-nist-level: 3
+length-public-key: 115
+length-secret-key: 48
+length-signature: 29853
+nistkat-sha256: 1448df5fe764c2acb3e91a119d0618a8a84fd3526f80e4f824f8f19fdf448782
+testvectors-sha256: 5c191a0c56d1fa3182ccc54137dc74d38f9e09873553f20073bca20a38b6b418
+principal-submitters:
+  - Marco Baldi
+  - Alessandro Barenghi
+  - Michele Battagliola
+  - Sebastian Bitzer
+  - Patrick Karl
+  - Felice Manganiello
+  - Alessio Pavoni
+  - Gerardo Pelosi
+  - Paolo Santini
+  - Jonas Schupp
+  - Edoardo Signorini
+  - Freeman Slaughter
+  - Antonia Wachter-Zeh
+  - Violetta Weger
+auxiliary-submitters:
+  - Marco Gianvecchio
+implementations:
+  - name: clean
+    version: 2.0 + PQClean and OQS patches
+  - name: avx2
+    version: 2.0 + PQClean and OQS patches
+    supported_platforms:
+      - architecture: x86_64
+        required_flags:
+          - avx2

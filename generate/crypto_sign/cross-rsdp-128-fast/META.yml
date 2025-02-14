@@ -1,0 +1,34 @@
+name: cross-rsdp-128-fast
+type: signature
+claimed-nist-level: 1
+length-public-key: 77
+length-secret-key: 32
+length-signature: 18432
+nistkat-sha256: 0e4818ec4a37211a00b475583d3b3104db68ad59f4434811ce99fdb5aa72a865
+testvectors-sha256: 8e591842678307ec035200e98e8a7a9b3d056912ce1d806c8fd4c8977f70b179
+principal-submitters:
+  - Marco Baldi
+  - Alessandro Barenghi
+  - Michele Battagliola
+  - Sebastian Bitzer
+  - Patrick Karl
+  - Felice Manganiello
+  - Alessio Pavoni
+  - Gerardo Pelosi
+  - Paolo Santini
+  - Jonas Schupp
+  - Edoardo Signorini
+  - Freeman Slaughter
+  - Antonia Wachter-Zeh
+  - Violetta Weger
+auxiliary-submitters:
+  - Marco Gianvecchio
+implementations:
+  - name: clean
+    version: 2.0 + PQClean and OQS patches
+  - name: avx2
+    version: 2.0 + PQClean and OQS patches
+    supported_platforms:
+      - architecture: x86_64
+        required_flags:
+          - avx2

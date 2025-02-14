@@ -1,0 +1,34 @@
+name: cross-rsdp-192-small
+type: signature
+claimed-nist-level: 3
+length-public-key: 115
+length-secret-key: 48
+length-signature: 28391
+nistkat-sha256: b32ef5358952748175be84dd079a73e9dca94de05f601cea49faf52f82510c94
+testvectors-sha256: 9518da2336b750d532f0ec44a10e8644c6119b20cec7aa922cd063e76c2419f6
+principal-submitters:
+  - Marco Baldi
+  - Alessandro Barenghi
+  - Michele Battagliola
+  - Sebastian Bitzer
+  - Patrick Karl
+  - Felice Manganiello
+  - Alessio Pavoni
+  - Gerardo Pelosi
+  - Paolo Santini
+  - Jonas Schupp
+  - Edoardo Signorini
+  - Freeman Slaughter
+  - Antonia Wachter-Zeh
+  - Violetta Weger
+auxiliary-submitters:
+  - Marco Gianvecchio
+implementations:
+  - name: clean
+    version: 2.0 + PQClean and OQS patches
+  - name: avx2
+    version: 2.0 + PQClean and OQS patches
+    supported_platforms:
+      - architecture: x86_64
+        required_flags:
+          - avx2

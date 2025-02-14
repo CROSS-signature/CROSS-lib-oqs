@@ -1,0 +1,19 @@
+# This Makefile can be used with Microsoft Visual Studio's nmake using the command:
+#    nmake /f Makefile.Microsoft_nmake
+
+LIBRARY=libcross-rsdpg-128-balanced_clean.lib
+OBJECTS=CROSS.obj csprng_hash.obj merkle.obj pack_unpack.obj seedtree.obj sign.obj
+
+CFLAGS=/nologo /I ..\..\..\common /O2 /std:c11 /W4 /wd4146 /WX
+
+all: $(LIBRARY)
+
+# Make sure objects are recompiled if headers change.
+$(OBJECTS): *.h
+
+$(LIBRARY): $(OBJECTS)
+    LIB.EXE /NOLOGO /WX /OUT:$@ $**
+
+clean:
+    -DEL $(OBJECTS)
+    -DEL $(LIBRARY)
