@@ -104,7 +104,7 @@ void csprng_initialize_x3(CSPRNG_X3_STATE_T *const csprng_state,
                           const uint16_t dsc3) {
 	/* PQClean-edit: avoid VLA */
 	// const unsigned char seed4[seed_len_bytes]; // discarded
-	unsigned char *seed4 = (unsigned char *)malloc(seed_len_bytes); // discarded
+	unsigned char *seed4 = (unsigned char *)OQS_MEM_malloc(seed_len_bytes); // discarded
 	xof_shake_x4_init(csprng_state);
 	xof_shake_x4_update(csprng_state, seed1, seed2, seed3, seed4, seed_len_bytes);
 	uint8_t dsc_ordered1[2], dsc_ordered2[2], dsc_ordered3[2], dsc_ordered4[2]; // dsc_ordered4 is discarded
@@ -152,7 +152,7 @@ static inline
 void csprng_randombytes_x3(unsigned char *const x1, unsigned char *const x2, unsigned char *const x3, uint64_t xlen, CSPRNG_X3_STATE_T *const csprng_state) {
 	/* PQClean-edit: avoid VLA */
 	// unsigned char x4[xlen]; // discarded
-	unsigned char *x4 = (unsigned char *)malloc(xlen); // discarded
+	unsigned char *x4 = (unsigned char *)OQS_MEM_malloc(xlen); // discarded
 	xof_shake_x4_extract(csprng_state, x1, x2, x3, x4, xlen);
 	free(x4);
 }
