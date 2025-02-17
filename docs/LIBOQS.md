@@ -11,6 +11,12 @@ When the codebase of CROSS changes we need to port the modifications to liboqs, 
 
 - If necessary, edit also the metadata in file `META.yml`
 
+- Install the `unifdef` utility, used to remove dead code. On a Debian-based system it's as simple as:
+
+    ```
+    sudo apt install unifdef
+    ```
+
 - Generate code for the 18 variants:
     ```
     cd generate
