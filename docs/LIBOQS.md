@@ -9,6 +9,8 @@ When the codebase of CROSS changes we need to port the modifications to liboqs, 
 
 - Apply the changes to the files in the `clean` and `avx2` directories
 
+- If there was a change in parameters or KAT update `parameter_sets.csv` accordingly
+
 - If necessary, edit also the metadata in file `META.yml`
 
 - Install the `unifdef` utility, used to remove dead code. On a Debian-based system it's as simple as:
@@ -92,6 +94,9 @@ with the one copied before:
     `liboqs/.github/CODEOWNERS`
     \
     `liboqs/CONTRIBUTING.md`
+    - KAT sha256: the "single" digests are imported from `META.yml`, the "all" digest should be updated manually
+    \
+    `liboqs/tests/KATs/sig/kats.json`
 
 - Commit everything and push to GitHub. Make sure to sign every commit to liboqs with your name, by adding a line like this to the commit message:
     ```
