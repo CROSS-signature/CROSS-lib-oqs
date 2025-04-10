@@ -51,6 +51,7 @@
 /* required bytes of input randomness */
 #define PQCLEAN_CROSSRSDP192FAST_AVX2_CRYPTO_RANDOMBYTES 24
 
+
 int PQCLEAN_CROSSRSDP192FAST_AVX2_crypto_sign_keypair(unsigned char *pk,
         unsigned char *sk
                                                      );

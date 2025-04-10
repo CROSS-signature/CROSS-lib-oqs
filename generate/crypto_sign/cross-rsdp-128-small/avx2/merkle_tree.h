@@ -33,6 +33,7 @@
 
 #include "namespace.h"
 
+
 /* Stub of the interface to Merkle tree root computer from all leaves */
 void tree_root(uint8_t root[HASH_DIGEST_LENGTH],
                uint8_t tree[NUM_NODES_MERKLE_TREE * HASH_DIGEST_LENGTH],

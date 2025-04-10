@@ -83,6 +83,8 @@ FP_ELEM RESTR_TO_VAL(FP_ELEM x) {
 	return FPRED_SINGLE( FPRED_SINGLE(res1 * res2) * FPRED_SINGLE(res3 * res4) );
 }
 
+
+
 /* in-place normalization of redundant zero representation for syndromes*/
 static inline
 void fp_dz_norm_synd(FP_ELEM v[N - K]) {
@@ -163,6 +165,7 @@ void fp_vec_by_restr_vec_scaled(FP_ELEM res[N],
 		                       (FP_DOUBLEPREC) RESTR_TO_VAL(e[i]) * (FP_DOUBLEPREC) chall_1) ;
 	}
 }
+
 
 static inline
 void fp_synd_minus_fp_vec_scaled(FP_ELEM res[N - K],

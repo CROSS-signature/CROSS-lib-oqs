@@ -31,6 +31,7 @@
 
 #pragma once
 
+
 // %%%%%%%%%%%%%%%%%% Self-contained SHAKE x1 Wrappers %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 #include "fips202.h"
@@ -72,6 +73,7 @@ void xof_shake_release(SHAKE_STATE_STRUCT *state) {
 	shake128_inc_ctx_release(state);
 }
 
+
 // %%%%%%%%%%%%%%%%%% Self-contained SHAKE x4 Wrappers %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 #include "fips202x4.h"
@@ -108,6 +110,7 @@ static inline void xof_shake_x4_extract(SHAKE_X4_STATE_STRUCT *states,
 static inline void xof_shake_x4_release(SHAKE_X4_STATE_STRUCT *states) {
 	SHAKE_X4_RELEASE(states);
 }
+
 
 // %%%%%%%%%%%%%%%%%% Self-contained SHAKE x2 Wrappers %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

@@ -51,6 +51,7 @@
 /* required bytes of input randomness */
 #define PQCLEAN_CROSSRSDPG192SMALL_CLEAN_CRYPTO_RANDOMBYTES 24
 
+
 int PQCLEAN_CROSSRSDPG192SMALL_CLEAN_crypto_sign_keypair(unsigned char *pk,
         unsigned char *sk
                                                         );

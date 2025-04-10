@@ -174,6 +174,7 @@ void csprng_release_x4(CSPRNG_X4_STATE_T *const csprng_state) {
 	xof_shake_x4_release(csprng_state);
 }
 
+
 /**************** Common API for Parallel CSPRNG *****************/
 
 #define PAR_CSPRNG_STATE_T par_shake_ctx

@@ -36,6 +36,7 @@
 #include "merkle_tree.h"
 #include "parameters.h"
 
+
 #define TO_PUBLISH 1
 #define NOT_TO_PUBLISH 0
 
@@ -95,3 +96,4 @@ uint8_t recompute_root(uint8_t root[HASH_DIGEST_LENGTH],
 	tree_root(root, recomputed_leaves);
 	return 1;
 }
+

@@ -36,6 +36,7 @@
 #include "merkle_tree.h"
 #include "parameters.h"
 
+
 #define PARENT(i) ( ((i)%2) ? (((i)-1)/2) : (((i)-2)/2) )
 #define SIBLING(i) ( ((i)%2) ? (i)+1 : (i)-1 )
 
@@ -46,7 +47,7 @@
 /*****************************************************************************/
 static
 void place_cmt_on_leaves(unsigned char merkle_tree[NUM_NODES_MERKLE_TREE *
-                         HASH_DIGEST_LENGTH],
+                                               HASH_DIGEST_LENGTH],
                          unsigned char commitments[T][HASH_DIGEST_LENGTH]) {
 	const uint16_t cons_leaves[TREE_SUBROOTS] = TREE_CONSECUTIVE_LEAVES;
 	const uint16_t leaves_start_indices[TREE_SUBROOTS] = TREE_LEAVES_START_INDICES;

@@ -38,6 +38,7 @@
 #define FZRED_OPPOSITE(x) ((x) ^ 0x7f)
 #define FZ_DOUBLE_ZERO_NORM(x) (((x) + (((x) + 1) >> 7)) & 0x7f)
 
+
 static inline
 void fz_dz_norm_n(FZ_ELEM v[N]) {
 	for (int i = 0; i < N; i++) {

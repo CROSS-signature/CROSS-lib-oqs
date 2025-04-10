@@ -51,6 +51,7 @@
 /* required bytes of input randomness */
 #define PQCLEAN_CROSSRSDPG256FAST_AVX2_CRYPTO_RANDOMBYTES 32
 
+
 int PQCLEAN_CROSSRSDPG256FAST_AVX2_crypto_sign_keypair(unsigned char *pk,
         unsigned char *sk
                                                       );

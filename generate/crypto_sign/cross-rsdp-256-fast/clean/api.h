@@ -51,6 +51,7 @@
 /* required bytes of input randomness */
 #define PQCLEAN_CROSSRSDP256FAST_CLEAN_CRYPTO_RANDOMBYTES 32
 
+
 int PQCLEAN_CROSSRSDP256FAST_CLEAN_crypto_sign_keypair(unsigned char *pk,
         unsigned char *sk
                                                       );

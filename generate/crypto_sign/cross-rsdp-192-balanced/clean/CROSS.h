@@ -67,6 +67,7 @@ typedef struct {
 	resp_0_t resp_0[T - W];
 } CROSS_sig_t;
 
+
 /* keygen cannot fail */
 void CROSS_keygen(sk_t *SK,
                   pk_t *PK);

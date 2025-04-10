@@ -48,6 +48,7 @@ void pack_fp_syn(uint8_t out[DENSELY_PACKED_FP_SYN_SIZE],
 void pack_fz_vec(uint8_t out[DENSELY_PACKED_FZ_VEC_SIZE],
                  const FZ_ELEM in[N]);
 
+
 uint8_t unpack_fp_vec(FP_ELEM out[N],
                       const uint8_t in[DENSELY_PACKED_FP_VEC_SIZE]);
 
@@ -56,3 +57,4 @@ uint8_t unpack_fp_syn(FP_ELEM out[N - K],
 
 uint8_t unpack_fz_vec(FZ_ELEM out[N],
                       const uint8_t in[DENSELY_PACKED_FZ_VEC_SIZE]);
+

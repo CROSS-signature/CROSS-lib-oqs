@@ -33,6 +33,7 @@
 
 #include "namespace.h"
 
+
 void tree_root(uint8_t root[HASH_DIGEST_LENGTH],
                uint8_t leaves[T][HASH_DIGEST_LENGTH]);
 
@@ -44,3 +45,4 @@ uint8_t recompute_root(uint8_t root[HASH_DIGEST_LENGTH],
                        uint8_t recomputed_leaves[T][HASH_DIGEST_LENGTH],
                        const uint8_t mtp[W * HASH_DIGEST_LENGTH],
                        const uint8_t leaves_to_reveal[T]);
+
