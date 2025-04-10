@@ -25,9 +25,9 @@ auxiliary-submitters:
   - Marco Gianvecchio
 implementations:
   - name: clean
-    version: 2.0 + PQClean and OQS patches
+    version: 2.2 + PQClean and OQS patches
   - name: avx2
-    version: 2.0 + PQClean and OQS patches
+    version: 2.2 + PQClean and OQS patches
     supported_platforms:
       - architecture: x86_64
         required_flags:
