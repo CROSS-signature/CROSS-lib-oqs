@@ -36,8 +36,8 @@ def remove_dead_code(dir):
     unifdef_command = 'head -60 '+dir+'/parameters.h > '+dir+'/tmp_parameters.h'
     os.system(unifdef_command)
     # remove parentheses from the temporary parameters.h, unifdef does not like them
-    replace_in_file(dir+'/tmp_parameters.h', '\(', '')
-    replace_in_file(dir+'/tmp_parameters.h', '\)', '')
+    replace_in_file(dir+'/tmp_parameters.h', r'\(', '')
+    replace_in_file(dir+'/tmp_parameters.h', r'\)', '')
     # use the definitions in set.h and parameters.h to remove dead code from the rest of the files
     for file in os.listdir(dir):
         if file.endswith('.c') or file.endswith('.h'):
