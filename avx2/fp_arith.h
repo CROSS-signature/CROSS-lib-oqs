@@ -523,10 +523,11 @@ void fp_synd_minus_fp_vec_scaled(FP_ELEM res[N-K],
 }
 
 #if defined(RSDPG) && defined(HIGH_PERFORMANCE_X86_64)
+#if defined(CATEGORY_1)
 /* liboqs-edit: don't inline for Category 1 (liboqs/issues/2343) */
 static
-#if !defined(CATEGORY_1)
-inline
+#else
+static inline
 #endif
 void convert_restr_vec_to_fp(FP_ELEM res[N], const FZ_ELEM in[N]){
     /* res: expand, align */
