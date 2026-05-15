@@ -1,0 +1,9 @@
+This repository serves as an upstream source for CROSS in liboqs. The CROSS maintainer team commits to investigating bugs and security reports in a timely manner and releasing fixes when necessary. Please report issues to:
+
+Marco Gianvecchio
+https://github.com/rtjk/
+marco.gianvecchio@polimi.it
+
+Alessandro Barenghi
+https://github.com/alexrow
+alessandro.barenghi@polimi.it
